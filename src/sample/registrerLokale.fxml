@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="side1" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllerLokale">
+    <children>
+      <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="49.0" prefHeight="508.0" prefWidth="555.0" spacing="30.0">
+         <children>
+            <Label text="Registrer Lokale" />
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="146.0">
+                     <children>
+                          <Label text="Registrer ditt lokale" />
+                          <TextField fx:id="txtLokale" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="155.0">
+                     <children>
+                          <Label text="Hvilken type lokale er det " />
+                          <TextField fx:id="txtType" prefHeight="25.0" prefWidth="158.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="171.0">
+                     <children>
+                          <Label text="Hvor mange er det plass til? " />
+                          <TextField fx:id="txtAntall" prefHeight="25.0" prefWidth="142.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+              <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnRegistrer" text="Registrer" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="146.0" text="Lokaler">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="lokaleView" prefHeight="141.0" prefWidth="555.0">
+               <columns>
+                  <TableColumn fx:id="lokaleNavnKolonne" prefWidth="167.0" text="Lokale" />
+                  <TableColumn fx:id="lokaleTypeKolonne" prefWidth="229.5" text="Type Lokale" />
+                  <TableColumn fx:id="lokaleAntallKolonne" prefWidth="157.5" text="Antall Plasser" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

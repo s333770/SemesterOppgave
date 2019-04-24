@@ -1,8 +1,38 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllerStartSide">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="65.0" layoutY="72.0" prefHeight="200.0" prefWidth="471.0" spacing="20.0">
+         <children>
+            <Label alignment="TOP_RIGHT" contentDisplay="CENTER" text="Startside for Kulturhus">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Label text="Opprett arrangement" />
+                  <Label text="Bestill biletter" />
+                  <Label text="Legg til nytt lokale" />
+                  <Label text="KontaktPerson" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#opprettArrangement" text="Arrangement" />
+                  <Button mnemonicParsing="false" onAction="#bestillBilletter" text="Biletter" />
+                  <Button mnemonicParsing="false" onAction="#leggTilLokale" text="Lokale" />
+                  <Button mnemonicParsing="false" onAction="#leggTilKontaktPerson" text="KontaktPerson" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
