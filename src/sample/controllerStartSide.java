@@ -29,8 +29,8 @@ public class controllerStartSide implements Initializable {
     /*Dette er de tre startknappene fra startsiden*/
     public void leggTilLokale(javafx.event.ActionEvent actionEvent) throws IOException { // Dette er registreringsknappen
         Parent parent= FXMLLoader.load(getClass().getResource("/sample/registrerLokale.fxml"));
-        Scene scene = new Scene(parent);
-
+        Scene scene = new Scene(parent,600,550);
+        
         //Denne metoden brukes for å bytte scener:
         Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(scene);
