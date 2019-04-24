@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="647.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllerKontaktPerson">
+   <children>
+      <Label layoutX="224.0" layoutY="39.0" text="KontaktPerson">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="43.0" layoutY="100.0" prefHeight="268.0" prefWidth="510.0">
+         <children>
+            <VBox prefHeight="268.0" prefWidth="156.0" spacing="29.0">
+               <children>
+                  <Label text="Navn:" />
+                  <Label text="Telefonnummer:" />
+                  <Label text="Epost-adresse:" />
+                  <Label text="Nettside:" />
+                  <Label text="Firma/tilknytning:" />
+                  <Label text="Andre opplysninger:" />
+               </children>
+            </VBox>
+            <VBox prefHeight="268.0" prefWidth="159.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="txtNavnKontakt" />
+                  <TextField fx:id="txtTelefonKontakt" />
+                  <TextField fx:id="txtEpostKontakt" />
+                  <TextField fx:id="txtNettsideKontakt" />
+                  <TextField fx:id="txtFirmaKontakt" />
+                  <TextField fx:id="txtOpplysningerKontakt" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="272.0" layoutY="389.0" mnemonicParsing="false" onAction="#btnRegistrerKontaktPerson" text="Registrer" />
+      <TableView fx:id="kontaktView" layoutX="6.0" layoutY="433.0" prefHeight="200.0" prefWidth="697.0">
+        <columns>
+          <TableColumn fx:id="navnKontaktKolonne" prefWidth="75.0" text="Navn" />
+          <TableColumn fx:id="telefonKontaktKolonne" prefWidth="119.0" text="Telefonnummer" />
+            <TableColumn fx:id="epostKontaktKolonne" prefWidth="85.5" text="E-post" />
+            <TableColumn fx:id="nettsideKontaktKolonne" prefWidth="109.5" text="Nettside" />
+            <TableColumn fx:id="firmaKontaktKolonne" minWidth="0.0" prefWidth="116.0" text="Firma" />
+            <TableColumn fx:id="opplysningerKontaktKolonne" minWidth="0.0" prefWidth="187.5" text="Opplysninger" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

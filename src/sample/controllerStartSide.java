@@ -28,21 +28,26 @@ public class controllerStartSide implements Initializable {
 
     /*Dette er de tre startknappene fra startsiden*/
     public void leggTilLokale(javafx.event.ActionEvent actionEvent) throws IOException { // Dette er registreringsknappen
-        Parent parent= FXMLLoader.load(getClass().getResource("/sample/registrerLokale.fxml"));
+
+       Parent parent= FXMLLoader.load(getClass().getResource("/sample/registrerLokale.fxml"));
         Scene scene = new Scene(parent,600,550);
-        
+
         //Denne metoden brukes for å bytte scener:
         Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
+
     }
+
     public void leggTilKontaktPerson(javafx.event.ActionEvent actionEvent) throws IOException{
-        Parent parent= FXMLLoader.load(getClass().getResource("/sample/registrerLokale.fxml"));
+
+        Parent parent= FXMLLoader.load(getClass().getResource("/sample/registrerKontaktPerson.fxml"));
         Scene scene = new Scene(parent);
         //Denne metoden brukes for å bytte scener:
         Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
+
     }
 
 
@@ -55,7 +60,15 @@ public class controllerStartSide implements Initializable {
 
     @Override // Dette brukes for å legge initaliseringen til i systemet
     public void initialize(URL location, ResourceBundle resources) {
-
     }
-
+    /* Dette skal være en funksjon for å bytte scener uten å måtte duplisere så mye kode
+    public void changeSceneMethod(String FXMLAdresse) throws IOException{
+        Parent parent= FXMLLoader.load(getClass().getResource("/sample/"+FXMLAdresse));
+        Scene scene = new Scene(parent);
+        //Denne metoden brukes for å bytte scener:
+        Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    */
 }

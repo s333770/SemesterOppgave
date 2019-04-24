@@ -1,15 +1,15 @@
 package sample;
 
-class Kontaktperson {
+public class Kontaktperson {
 
     private String personNavn;
-    private int personNummer;
+    private String personNummer;
     private String personEmail;
     private String personSide;
     private String personFirma;
     private String personTekst;
 
-    public Kontaktperson(String personNavn, int personNummer, String personEmail, String personSide, String personFirma, String personTekst) {
+    public Kontaktperson(String personNavn, String personNummer, String personEmail, String personSide, String personFirma, String personTekst) {
         this.personNavn = personNavn;
         this.personNummer = personNummer;
         this.personEmail = personEmail;
@@ -20,8 +20,8 @@ class Kontaktperson {
 
     public String getPersonNavn() { return personNavn; }
     public void setPersonNavn(String personNavn) { this.personNavn = personNavn; }
-    public int getPersonNummer() { return personNummer; }
-    public void setPersonNummer(int personNummer) { this.personNummer = personNummer; }
+    public String getPersonNummer() { return personNummer; }
+    public void setPersonNummer(String personNummer) { this.personNummer = personNummer; }
     public String getPersonEmail() { return personEmail; }
     public void setPersonEmail(String personEmail) { this.personEmail = personEmail; }
     public String getPersonSide() { return personSide; }
